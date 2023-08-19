@@ -3,7 +3,7 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
-import openai from "openai";
+//import openai from "openai";
 import authRoute  from "./routes/auth.js";
 import promptsRoute  from "./routes/prompts.js";
 import tagsRoute  from "./routes/tags.js";
@@ -14,8 +14,6 @@ dotenv.config();
 
 const app = express();
 // database connection
-
-
 
 
 app.use(express.json());
@@ -53,8 +51,8 @@ app.use((err,req,res,next)=>{
         stack:err.stack,
     });
 });
-app.listen(3300,()=>{
+app.listen(3000,()=>{
     connect();
     console.log("Connected to backend");
-    console.log("lisent with the port 3300");
+    console.log("lisent with the port 3000");
 });
