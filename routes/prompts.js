@@ -10,14 +10,14 @@ import {
 import { verifyUser } from "../utils/verifyToken.js"; 
 const router =  express.Router();
 
-router.post("/",verifyUser,createPrompt)
-router.post("/execute",verifyUser,ExecutePrompt)
+router.post("/",createPrompt)
+router.post("/execute",ExecutePrompt)
 // IT IS CALLED THE FUNCTION UPDATE OF CONTROLLER
-router.put("/:id",verifyUser, updatePrompt)
+router.put("/:id", updatePrompt)
 // IT IS CALLED THE FUNCTION DELETE OF CONTROLLER
-router.delete("/:id",verifyUser, deletePrompt)
+router.delete("/:id", deletePrompt)
 // IT IS CALLED THE FUNCTION GET OF CONTROLLER
-router.get("/",verifyUser,getPrompt)
+router.get("/",getPrompt)
 
 router.get("/:iduser",verifyUser,getPromptsByUser)
 export default router;

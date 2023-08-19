@@ -10,15 +10,15 @@ import { verifyAdmin, verifyUser} from "../utils/verifyToken.js";
 const router = express.Router();
 
 // IT IS CALLED THE FUNCTION CREATE OF CONTROLLER
-router.post("/",verifyAdmin,createUser)
+router.post("/",createUser)
 // IT IS CALLED THE FUNCTION UPDATE OF CONTROLLER
-router.put("/:id",verifyAdmin, updateUser)
+router.put("/:id", updateUser)
 // IT IS CALLED THE FUNCTION DELETE OF CONTROLLER
-router.delete("/:id",verifyAdmin, deleteUser)
+router.delete("/:id", deleteUser)
 // IT IS CALLED THE FUNCTION GET OF CONTROLLER
-router.get("/:id",verifyAdmin, getUser)
+router.get("/:id", getUser)
 // IT IS CALLED THE FUNCTION GET ALL OF CONTROLLER
-router.get("/",verifyAdmin,getUsers)
+router.get("/",getUsers)
 
 
 export default router;
