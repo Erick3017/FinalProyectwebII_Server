@@ -4,15 +4,15 @@ import mongoose from 'mongoose';
 //el squema hace referencia al objeto y a los tipos de datos que se utilizaraan 
 
 const TagSchema = new mongoose.Schema({
-    description:{
-        type: String, 
-        require:true,        
+    description: {
+        type: String,
+        require: true,
     },
-    color:{
-        type: String, 
-        require:false,        
+    color: {
+        type: String,
+        require: false,
     },
-    }
-,{timestamps: true})
+}
+    , { timestamps: true })
 
 export default mongoose.model("Tag", TagSchema);

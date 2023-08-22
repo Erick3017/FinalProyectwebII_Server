@@ -13,7 +13,6 @@ export const createPrompt = async (req, res, next) => {
     }
 }
 
-
 export const updatePrompt = async (req, res, next) => {
     try {
         const updatePrompt = await User.findByIdAndUpdate(
